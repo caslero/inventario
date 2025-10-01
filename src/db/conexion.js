@@ -9,7 +9,7 @@ const dbPath = path.resolve(__dirname, "../../src/db/inventario.sqlite");
 
 const conexion = new sqlite3.Database(dbPath, (err) => {
   if (err) {
-    console.error("Error al conectar a la base de datos:", err.message);
+    console.log("Error al conectar a la base de datos:", err.message);
   } else {
     crearTablas()
     console.log("Conectado a la base de datos SQLite.");
